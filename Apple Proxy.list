@@ -1,4 +1,4 @@
-# NAME: OpenAI
+# NAME: Apple
 # AUTHOR: Darrell Cui
 # REPO: https://github.com/Darrellcui/QuanX/
 # UPDATED: 2026-06-09 
@@ -22,3 +22,19 @@ host-suffix, gspe1-ssl.ls.apple.com, Apple Proxy
 host, mask.icloud.com, Apple Proxy
 host, mask-h2.icloud.com, Apple Proxy
 host, mask-api.icloud.com, Apple Proxy
+
+# Apple APNs Push
+# 设置完之后建议开关飞行模式，断掉所有连接后再测试
+host-suffix, akadns.net, PROXY
+host-suffix, apple.com.edgekey.net, PROXY
+
+ip-cidr, 17.249.0.0/16, PROXY, no-resolve
+ip-cidr, 17.252.0.0/16, PROXY, no-resolve
+ip-cidr, 17.57.144.0/22, PROXY, no-resolve
+ip-cidr, 17.188.128.0/18, PROXY, no-resolve
+ip-cidr, 17.188.20.0/23, PROXY, no-resolve
+
+ip6-cidr, 2620:149:a44::/48, PROXY, no-resolve
+ip6-cidr, 2403:300:a42::/48, PROXY, no-resolve
+ip6-cidr, 2403:300:a51::/48, PROXY, no-resolve
+ip6-cidr, 2a01:b740:a42::/48, PROXY, no-resolve
