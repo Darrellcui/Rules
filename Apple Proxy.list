@@ -3,38 +3,38 @@
 # REPO: https://github.com/Darrellcui/QuanX/
 # UPDATED: 2026-06-09 
 # Apple Push Notification / APNs
-host-suffix, push.apple.com, Apple Proxy
-host-suffix, sandbox.push.apple.com, Apple Proxy
-host-suffix, api.push.apple.com, Apple Proxy
-host-suffix, gateway.push.apple.com, Apple Proxy
+host-suffix, push.apple.com, Apple
+host-suffix, sandbox.push.apple.com, Apple
+host-suffix, api.push.apple.com, Apple
+host-suffix, gateway.push.apple.com, Apple
 
 # Apple Intelligence / Siri / Search / Private Cloud Compute
-host, guzzoni.apple.com, Apple Proxy
-host-suffix, smoot.apple.com, Apple Proxy
-host, apple-relay.cloudflare.com, Apple Proxy
-host, apple-relay.fastly-edge.com, Apple Proxy
-host, cp4.cloudflare.com, Apple Proxy
-host, apple-relay.apple.com, Apple Proxy
-host-suffix, siri.apple.com, Apple Proxy
-host-suffix, gspe1-ssl.ls.apple.com, Apple Proxy
+host, guzzoni.apple.com, Apple
+host-suffix, smoot.apple.com, Apple
+host, apple-relay.cloudflare.com, Apple
+host, apple-relay.fastly-edge.com, Apple
+host, cp4.cloudflare.com, Apple
+host, apple-relay.apple.com, Apple
+host-suffix, siri.apple.com, Apple
+host-suffix, gspe1-ssl.ls.apple.com, Apple
 
 # Optional: iCloud Private Relay
-host, mask.icloud.com, Apple Proxy
-host, mask-h2.icloud.com, Apple Proxy
-host, mask-api.icloud.com, Apple Proxy
+host, mask.icloud.com, Apple
+host, mask-h2.icloud.com, Apple
+host, mask-api.icloud.com, Apple
 
 # Apple APNs Push
 # 设置完之后建议开关飞行模式，断掉所有连接后再测试
-host-suffix, akadns.net, PROXY
-host-suffix, apple.com.edgekey.net, PROXY
+host-suffix, akadns.net, Apple
+host-suffix, apple.com.edgekey.net, Apple
 
-ip-cidr, 17.249.0.0/16, PROXY, no-resolve
-ip-cidr, 17.252.0.0/16, PROXY, no-resolve
-ip-cidr, 17.57.144.0/22, PROXY, no-resolve
-ip-cidr, 17.188.128.0/18, PROXY, no-resolve
-ip-cidr, 17.188.20.0/23, PROXY, no-resolve
+ip-cidr, 17.249.0.0/16, Apple, no-resolve
+ip-cidr, 17.252.0.0/16, Apple, no-resolve
+ip-cidr, 17.57.144.0/22, Apple, no-resolve
+ip-cidr, 17.188.128.0/18, Apple, no-resolve
+ip-cidr, 17.188.20.0/23, Apple, no-resolve
 
-ip6-cidr, 2620:149:a44::/48, PROXY, no-resolve
-ip6-cidr, 2403:300:a42::/48, PROXY, no-resolve
-ip6-cidr, 2403:300:a51::/48, PROXY, no-resolve
-ip6-cidr, 2a01:b740:a42::/48, PROXY, no-resolve
+ip6-cidr, 2620:149:a44::/48, Apple, no-resolve
+ip6-cidr, 2403:300:a42::/48, Apple, no-resolve
+ip6-cidr, 2403:300:a51::/48, Apple, no-resolve
+ip6-cidr, 2a01:b740:a42::/48, Apple, no-resolve
