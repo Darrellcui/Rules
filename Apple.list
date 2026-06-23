@@ -7,6 +7,7 @@ host-suffix, push.apple.com, Apple
 host-suffix, sandbox.push.apple.com, Apple
 host-suffix, api.push.apple.com, Apple
 host-suffix, gateway.push.apple.com, Apple
+host-suffix, akadns.net, Apple
 
 # Apple Intelligence / Siri / Search / Private Cloud Compute
 host, guzzoni.apple.com, Apple
