@@ -1,0 +1,52 @@
+# NAME: Apple APNs
+# AUTHOR: Darrell Cui
+# REPO: https://github.com/Darrellcui/QuanX/
+# UPDATED: 2026-06-24 
+
+# Apple Push Notification / APNs
+DOMAIN-SUFFIX, push.apple.com, Apple
+DOMAIN-SUFFIX, sandbox.push.apple.com, Apple
+DOMAIN-SUFFIX, api.push.apple.com, Apple
+DOMAIN-SUFFIX, gateway.push.apple.com, Apple
+DOMAIN-SUFFIX, akadns.net, Apple
+# Apple Intelligence / Siri / Search / Private Cloud Compute
+DOMAIN, guzzoni.apple.com, Apple
+DOMAIN-SUFFIX, smoot.apple.com, Apple
+DOMAIN, apple-relay.cloudflare.com, Apple
+DOMAIN, apple-relay.fastly-edge.com, Apple
+DOMAIN, cp4.cloudflare.com, Apple
+DOMAIN, apple-relay.apple.com, Apple
+DOMAIN-SUFFIX, siri.apple.com, Apple
+DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com, Apple
+# iCloud Private Relay
+DOMAIN, mask.icloud.com, Apple
+DOMAIN, mask-h2.icloud.com, Apple
+DOMAIN, mask-api.icloud.com, Apple
+# Apple APNs Push
+DOMAIN-SUFFIX, akadns.net, Apple
+DOMAIN-SUFFIX, apple.com.edgekey.net, Apple
+ip-cidr, 17.249.0.0/16, Apple, no-resolve
+ip-cidr, 17.252.0.0/16, Apple, no-resolve
+ip-cidr, 17.57.144.0/22, Apple, no-resolve
+ip-cidr, 17.188.128.0/18, Apple, no-resolve
+ip-cidr, 17.188.20.0/23, Apple, no-resolve
+ip6-cidr, 2620:149:a44::/48, Apple, no-resolve
+ip6-cidr, 2403:300:a42::/48, Apple, no-resolve
+ip6-cidr, 2403:300:a51::/48, Apple, no-resolve
+ip6-cidr, 2a01:b740:a42::/48, Apple, no-resolve
+
+# US
+DOMAIN, apigateway.americanexpress.com, US
+DOMAIN-SUFFIX, americanexpress.com, US
+DOMAIN-SUFFIX, aexp.com, US
+DOMAIN-SUFFIX, americanexpress.io, US
+DOMAIN-SUFFIX, amextravel.com, US
+DOMAIN-SUFFIX, gateway-na.americanexpress.com, US
+DOMAIN-SUFFIX, nav.com, US
+DOMAIN, app.nav.com, US
+DOMAIN-SUFFIX, stitchcredit.com, US
+DOMAIN-SUFFIX, crscreditapi.com, US
+DOMAIN-SUFFIX, equifax.com, US
+DOMAIN, my.equifax.com, US
+DOMAIN, api.equifax.com, US
+DOMAIN-SUFFIX, efxnow.com, US
