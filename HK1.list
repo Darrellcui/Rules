@@ -1,9 +1,0 @@
-# NAME: HK Service
-# AUTHOR: Darrell Cui
-# REPO: https://github.com/Darrellcui/QuanX/
-# UPDATED: 2026-06-09 
-# HK
-host-suffix, bochk.com, HK
-host-suffix, bochk.com.hk, HK
-host, its.bochk.com, HK
-host-suffix, bankofchina.com, HK
