@@ -18,23 +18,23 @@ host, cp4.cloudflare.com, Apple
 host, apple-relay.apple.com, Apple
 host-suffix, siri.apple.com, Apple
 host-suffix, gspe1-ssl.ls.apple.com, Apple
-host,guzzoni.apple.com
-host,mask-api.fe.apple-dns.net
-host,mask-api.icloud.com
-host,mask-t.apple-dns.net
-host,mask.apple-dns.net
-host-suffix,apple-relay.apple.com
-host-suffix,apple-relay.cloudflare.com
-host-suffix,apple-relay.fastly-edge.com
-host-suffix,apple-relay.mask.apple-dns.net
-host-suffix,cp4.cloudflare.com
-host-suffix,gateway.icloud.com
-host-suffix,gspe1-ssl.ls.apple.com
-host-suffix,ls.apple.com
-host-suffix,mask-h2.icloud.com
-host-suffix,mask.icloud.com
-host-suffix,smoot.apple.com
-host-suffix,apps.mzstatic.com
+host,guzzoni.apple.com, Apple
+host,mask-api.fe.apple-dns.net, Apple
+host,mask-api.icloud.com, Apple
+host,mask-t.apple-dns.net, Apple
+host,mask.apple-dns.net, Apple
+host-suffix,apple-relay.apple.com, Apple
+host-suffix,apple-relay.cloudflare.com, Apple
+host-suffix,apple-relay.fastly-edge.com, Apple
+host-suffix,apple-relay.mask.apple-dns.net, Apple
+host-suffix,cp4.cloudflare.com, Apple
+host-suffix,gateway.icloud.com, Apple
+host-suffix,gspe1-ssl.ls.apple.com, Apple
+host-suffix,ls.apple.com, Apple
+host-suffix,mask-h2.icloud.com, Apple
+host-suffix,mask.icloud.com, Apple
+host-suffix,smoot.apple.com, Apple
+host-suffix,apps.mzstatic.com, Apple
 # iCloud Private Relay
 host, mask.icloud.com, Apple
 host, mask-h2.icloud.com, Apple
