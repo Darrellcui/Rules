@@ -18,6 +18,23 @@ host, cp4.cloudflare.com, Apple
 host, apple-relay.apple.com, Apple
 host-suffix, siri.apple.com, Apple
 host-suffix, gspe1-ssl.ls.apple.com, Apple
+host,guzzoni.apple.com
+host,mask-api.fe.apple-dns.net
+host,mask-api.icloud.com
+host,mask-t.apple-dns.net
+host,mask.apple-dns.net
+host-suffix,apple-relay.apple.com
+host-suffix,apple-relay.cloudflare.com
+host-suffix,apple-relay.fastly-edge.com
+host-suffix,apple-relay.mask.apple-dns.net
+host-suffix,cp4.cloudflare.com
+host-suffix,gateway.icloud.com
+host-suffix,gspe1-ssl.ls.apple.com
+host-suffix,ls.apple.com
+host-suffix,mask-h2.icloud.com
+host-suffix,mask.icloud.com
+host-suffix,smoot.apple.com
+host-suffix,apps.mzstatic.com
 # iCloud Private Relay
 host, mask.icloud.com, Apple
 host, mask-h2.icloud.com, Apple
@@ -34,6 +51,7 @@ ip6-cidr, 2620:149:a44::/48, Apple, no-resolve
 ip6-cidr, 2403:300:a42::/48, Apple, no-resolve
 ip6-cidr, 2403:300:a51::/48, Apple, no-resolve
 ip6-cidr, 2a01:b740:a42::/48, Apple, no-resolve
+
 
 # US
 host, apigateway.americanexpress.com, US
