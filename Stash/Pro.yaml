@@ -176,55 +176,6 @@ dns:
 http:
   url-rewrite:
     - ^https?://(www\.)?(g|google)\.cn https://www.google.com 302
-  # ===== iRingo MITM 域名 =====
-  mitm:
-    # iRingo: LocationService
-    - "gspe1-ssl.ls.apple.com"
-    - "dispatcher.is.autonavi.com"
-    # iRingo: Maps
-    - "configuration.ls.apple.com"
-    - "gspe35-ssl.ls.apple.com"
-  # ===== iRingo 脚本 =====
-  script:
-    # iRingo: LocationService
-    - match: ^https?:\/\/gspe1-ssl\.ls\.apple\.com\/pep\/gcc
-      name: LocationService.response
-      type: response
-      require-body: true
-    - match: ^https?:\/\/dispatcher\.is\.autonavi\.com\/dispatcher
-      name: LocationService.request
-      type: request
-      require-body: true
-      binary-mode: true
-    - match: ^https?:\/\/dispatcher\.is\.autonavi\.com\/dispatcher
-      name: LocationService.response
-      type: response
-      require-body: true
-      binary-mode: true
-    # iRingo: Maps (GeoServices)
-    - match: ^https?:\/\/configuration\.ls\.apple\.com\/config\/defaults
-      name: GeoServices.request
-      type: request
-    - match: ^https?:\/\/configuration\.ls\.apple\.com\/config\/defaults
-      name: GeoServices.response
-      type: response
-      require-body: true
-    - match: ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/config\/announcements
-      name: GeoServices.request
-      type: request
-    - match: ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/config\/announcements
-      name: GeoServices.response
-      type: response
-      require-body: true
-      binary-mode: true
-    - match: ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/geo_manifest\/dynamic\/config
-      name: GeoServices.request
-      type: request
-    - match: ^https?:\/\/gspe35-ssl\.ls\.apple\.(com|cn)\/geo_manifest\/dynamic\/config
-      name: GeoServices.response
-      type: response
-      require-body: true
-      binary-mode: true
 
 # 代理服务提供商
 proxy-providers:
@@ -601,32 +552,8 @@ rule-providers:
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/wechat.list
     interval: 86400
 
-# 脚本提供商（iRingo 定位/地图）
-script-providers:
-  LocationService.request:
-    url: https://github.com/NSRingo/LocationService/releases/download/v1.0.1/request.bundle.js
-    interval: 86400
-  LocationService.response:
-    url: https://github.com/NSRingo/LocationService/releases/download/v1.0.1/response.bundle.js
-    interval: 86400
-  GeoServices.request:
-    url: https://github.com/NSRingo/GeoServices/releases/download/v4.6.1/request.bundle.js
-    interval: 86400
-  GeoServices.response:
-    url: https://github.com/NSRingo/GeoServices/releases/download/v4.6.1/response.bundle.js
-    interval: 86400
-
 # 分流规则
 rules:
-  # ========== iRingo 定位/地图（配合 MITM，直连 Apple/高德定位域名）==========
-  - DOMAIN,gspe1-ssl.ls.apple.com,DIRECT
-  - DOMAIN-SUFFIX,is.autonavi.com,DIRECT
-  - DOMAIN,gspe11-2-cn-ssl.ls.apple.com,DIRECT
-  - DOMAIN,gspe12-cn-ssl.ls.apple.com,DIRECT
-  - DOMAIN,gspe19-cn-ssl.ls.apple.com,DIRECT
-  - DOMAIN,gspe19-2-cn-ssl.ls.apple.com,DIRECT
-  - DOMAIN,gspe79-cn-ssl.ls.apple.com,DIRECT
-
   # ========== 广告拦截 ==========
   - RULE-SET,reject,REJECT
 
