@@ -306,6 +306,74 @@ proxy-groups:
       - 手动选择
       - DIRECT
 
+  - name: Google
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png
+    type: select
+    proxies:
+      - TW 台湾
+      - HK 香港
+      - SG 新加坡
+      - JP 日本
+      - US 美国
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
+  - name: Netflix
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Netflix.png
+    type: select
+    proxies:
+      - 流媒体专用
+      - TW 台湾
+      - SG 新加坡
+      - HK 香港
+      - JP 日本
+      - US 美国
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
+  - name: TikTok
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/TikTok.png
+    type: select
+    proxies:
+      - US 美国
+      - UK 英国
+      - SG 新加坡
+      - JP 日本
+      - TW 台湾
+      - HK 香港
+      - 其他线路
+      - 手动选择
+
+  - name: PayPal
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/PayPal.png
+    type: select
+    proxies:
+      - US 美国
+      - UK 英国
+      - SG 新加坡
+      - JP 日本
+      - HK 香港
+      - TW 台湾
+      - 其他线路
+      - 手动选择
+
+  - name: Microsoft
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Microsoft.png
+    type: select
+    proxies:
+      - Proxy
+      - DIRECT
+      - HK 香港
+      - SG 新加坡
+      - JP 日本
+      - US 美国
+      - TW 台湾
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
   # 基于地区分组
   - name: HK 香港
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
@@ -508,10 +576,130 @@ rule-providers:
     format: text
     url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.list
     interval: 86400
-  MultiRules:
+  google:
     type: http
-    behavior: classical
+    behavior: domain
     format: text
-    url: 
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.list
     interval: 86400
+  netflix:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.list
+    interval: 86400
+  tiktok:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
+    interval: 86400
+  paypal:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.list
+    interval: 86400
+  line:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/line.list
+    interval: 86400
+  microsoft:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
+    interval: 86400
+  wechat:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/wechat.list
+    interval: 86400
+
+# 分流规则
+rules:
+  # ========== 广告拦截 ==========
+  - RULE-SET,reject,REJECT
+
+  # ========== 自定义多规则 MultiRules ==========
+  # 由 Quantumult/Loon 的 MultiRules.list 转写为原生规则（Clash 的 classical 规则集
+  # 不携带策略名，因此无法直接复用原文件，改为内联以保留 Apple/EU/US/HK 的分流意图）
+  # ----- Apple（推送 / Siri / 中继 / iCloud Private Relay）-----
+  - DOMAIN-SUFFIX,push.apple.com,Apple
+  - DOMAIN-SUFFIX,akadns.net,Apple
+  - DOMAIN-SUFFIX,apple.com.edgekey.net,Apple
+  - DOMAIN,guzzoni.apple.com,Apple
+  - DOMAIN-SUFFIX,smoot.apple.com,Apple
+  - DOMAIN-SUFFIX,siri.apple.com,Apple
+  - DOMAIN-SUFFIX,ls.apple.com,Apple
+  - DOMAIN-SUFFIX,apps.mzstatic.com,Apple
+  - DOMAIN-SUFFIX,apple-relay.apple.com,Apple
+  - DOMAIN-SUFFIX,apple-relay.cloudflare.com,Apple
+  - DOMAIN-SUFFIX,apple-relay.fastly-edge.com,Apple
+  - DOMAIN-SUFFIX,apple-relay.mask.apple-dns.net,Apple
+  - DOMAIN-SUFFIX,cp4.cloudflare.com,Apple
+  - DOMAIN-SUFFIX,mask.icloud.com,Apple
+  - DOMAIN-SUFFIX,mask-h2.icloud.com,Apple
+  - DOMAIN-SUFFIX,gateway.icloud.com,Apple
+  - DOMAIN,mask-api.icloud.com,Apple
+  - DOMAIN,mask-api.fe.apple-dns.net,Apple
+  - DOMAIN,mask-t.apple-dns.net,Apple
+  - DOMAIN,mask.apple-dns.net,Apple
+  - IP-CIDR,17.249.0.0/16,Apple,no-resolve
+  - IP-CIDR,17.252.0.0/16,Apple,no-resolve
+  - IP-CIDR,17.57.144.0/22,Apple,no-resolve
+  - IP-CIDR,17.188.128.0/18,Apple,no-resolve
+  - IP-CIDR,17.188.20.0/23,Apple,no-resolve
+  - IP-CIDR6,2620:149:a44::/48,Apple,no-resolve
+  - IP-CIDR6,2403:300:a42::/48,Apple,no-resolve
+  - IP-CIDR6,2403:300:a51::/48,Apple,no-resolve
+  - IP-CIDR6,2a01:b740:a42::/48,Apple,no-resolve
+  # ----- EU（QuanX 的 EU 策略，Stash 无欧陆节点组，归入 UK 英国）-----
+  # 置于 US 之前，使 equip.uk.equifax.com 命中 EU 而非下方的 equifax.com(US)
+  - DOMAIN-SUFFIX,n26.com,UK 英国
+  - DOMAIN-SUFFIX,tech26.de,UK 英国
+  - DOMAIN-SUFFIX,number26.de,UK 英国
+  - DOMAIN-SUFFIX,equifax.co.uk,UK 英国
+  - DOMAIN,equip.uk.equifax.com,UK 英国
+  # ----- US -----
+  - DOMAIN-SUFFIX,americanexpress.com,US 美国
+  - DOMAIN-SUFFIX,aexp.com,US 美国
+  - DOMAIN-SUFFIX,americanexpress.io,US 美国
+  - DOMAIN-SUFFIX,amextravel.com,US 美国
+  - DOMAIN-SUFFIX,nav.com,US 美国
+  - DOMAIN-SUFFIX,stitchcredit.com,US 美国
+  - DOMAIN-SUFFIX,crscreditapi.com,US 美国
+  - DOMAIN-SUFFIX,equifax.com,US 美国
+  - DOMAIN-SUFFIX,efxnow.com,US 美国
+  # ----- HK -----
+  - DOMAIN-SUFFIX,bochk.com,HK 香港
+  - DOMAIN-SUFFIX,bochk.com.hk,HK 香港
+  - DOMAIN-SUFFIX,bankofchina.com,HK 香港
+
+  # ========== AI 服务（OpenAI / Claude 等）==========
+  - RULE-SET,ai service,AI Service
+
+  # ========== 各服务分流 ==========
+  - RULE-SET,github,GitHub
+  - RULE-SET,telegram,Telegram
+  - RULE-SET,spotify,Spotify
+  - RULE-SET,youtube,YouTube
+  - RULE-SET,google,Google
+  - RULE-SET,netflix,Netflix
+  - RULE-SET,tiktok,TikTok
+  - RULE-SET,paypal,PayPal
+  - RULE-SET,line,JP 日本
+  - RULE-SET,microsoft,Microsoft
+
+  # ========== 国内直连 ==========
+  - RULE-SET,wechat,DIRECT
+  - RULE-SET,cn-direct,DIRECT
+  - RULE-SET,lancidr,DIRECT,no-resolve
+  - GEOIP,CN,DIRECT,no-resolve
+
+  # ========== 兜底 ==========
+  - MATCH,Proxy
 
