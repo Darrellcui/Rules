@@ -201,7 +201,6 @@ proxy-groups:
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
     type: select
     proxies:
-      - 自动选择
       - HK 香港
       - SG 新加坡
       - JP 日本
@@ -211,8 +210,21 @@ proxy-groups:
       - 其他线路
       - DIRECT
 
-  - name: AI Service
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/AI.png
+  - name: OpenAI
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/OpenAI.png
+    type: select
+    proxies:
+      - US 美国
+      - UK 英国
+      - SG 新加坡
+      - JP 日本
+      - HK 香港
+      - TW 台湾
+      - 其他线路
+      - 手动选择
+
+  - name: Claude
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Claude.png
     type: select
     proxies:
       - US 美国
@@ -237,33 +249,6 @@ proxy-groups:
       - 其他线路
       - 手动选择
 
-  - name: Telegram
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
-    type: select
-    proxies:
-      - SG 新加坡
-      - HK 香港
-      - JP 日本
-      - TW 台湾
-      - US 美国
-      - UK 英国
-      - 其他线路
-      - 手动选择
-
-  - name: Spotify
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
-    type: select
-    proxies:
-      - 流媒体专用
-      - HK 香港
-      - SG 新加坡
-      - US 美国
-      - JP 日本
-      - TW 台湾
-      - UK 英国
-      - 其他线路
-      - 手动选择
-
   - name: YouTube
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/YouTube.png
     type: select
@@ -277,34 +262,6 @@ proxy-groups:
       - UK 英国
       - 其他线路
       - 手动选择
-
-  - name: GitHub
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/GitHub.png
-    type: select
-    proxies:
-      - HK 香港
-      - SG 新加坡
-      - JP 日本
-      - TW 台湾
-      - US 美国
-      - UK 英国
-      - 其他线路
-      - 手动选择
-      - DIRECT
-
-  - name: Web3
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Cryptocurrency.png
-    type: select
-    proxies:
-      - US 美国
-      - SG 新加坡
-      - HK 香港
-      - JP 日本
-      - UK 英国
-      - TW 台湾
-      - 其他线路
-      - 手动选择
-      - DIRECT
 
   - name: Google
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Google_Search.png
@@ -505,16 +462,6 @@ proxy-groups:
     filter: "(?i)^(?!.*(?:🇭🇰|香港|HK|Hong Kong|🇹🇼|台湾|臺灣|TW|Taiwan|🇯🇵|日本|JP|Japan|🇰🇷|韩国|KR|Korea|🇺🇸|美国|US|USA|America|🇸🇬|新加坡|SG|Singapore|🇨🇳|中国|CN|China|🇬🇧|英国|UK|Britain|London|\\.com\\b|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
 
   # 不限制地区
-  - name: 自动选择
-    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Auto.png
-    type: url-test
-    interval: 600
-    timeout: 5
-    lazy: true
-    tolerance: 100
-    include-all: true
-    filter: "^(?!.*(?:群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|\\.com\\b|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
-
   - name: 手动选择
     icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Static.png
     type: select
@@ -544,31 +491,17 @@ rule-providers:
     url: https://anti-ad.net/clash.yaml
     path: ./rules/reject.yaml
     interval: 86400
-  ai service:
-    type: http
-    behavior: domain
-    format: yaml
-    url: https://raw.githubusercontent.com/rokcso/dimrail/refs/heads/main/rules/ai-offshore.yaml
-    path: ./rules/ai-offshore.yaml
-    interval: 604800
-  github:
-    type: http
-    behavior: domain
-    format: yaml
-    url: https://raw.githubusercontent.com/rokcso/dimrail/refs/heads/main/rules/github.yaml
-    path: ./rules/github.yaml
-    interval: 604800
-  telegram:
+  openai:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.list
     interval: 86400
-  spotify:
+  claude:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.list
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/anthropic.list
     interval: 86400
   youtube:
     type: http
@@ -679,13 +612,11 @@ rules:
   - DOMAIN-SUFFIX,bochk.com.hk,HK 香港
   - DOMAIN-SUFFIX,bankofchina.com,HK 香港
 
-  # ========== AI 服务（OpenAI / Claude 等）==========
-  - RULE-SET,ai service,AI Service
+  # ========== AI 服务 ==========
+  - RULE-SET,openai,OpenAI
+  - RULE-SET,claude,Claude
 
   # ========== 各服务分流 ==========
-  - RULE-SET,github,GitHub
-  - RULE-SET,telegram,Telegram
-  - RULE-SET,spotify,Spotify
   - RULE-SET,youtube,YouTube
   - RULE-SET,google,Google
   - RULE-SET,netflix,Netflix
