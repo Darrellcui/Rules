@@ -1,0 +1,517 @@
+# Darrell: Stash Config
+# GitHub: https://github.com/Darrellcui/Rules/
+# Update: 2026-07-09
+
+# 运行模式：rule/global/direct
+mode: rule
+# 日志级别：silent/info/warning/error/debug
+# 日志级别越高日志输出量越大，越倾向于调试，若需要请自行开启
+log-level: silent
+
+# DNS 配置
+dns:
+  # 是否开启 IPv6 解析
+  ipv6: false
+  # 用于解析 DoH/DoT 域名的 DNS（需要能访问）
+  default-nameserver:
+    - 223.5.5.5
+    - 119.29.29.29
+    - 1.1.1.1
+    - 8.8.8.8
+  # 主要 DNS 服务器（国内外混合）
+  nameserver:
+    - https://dns.alidns.com/dns-query
+    - https://doh.pub/dns-query
+    - https://cloudflare-dns.com/dns-query
+    - https://dns.google/dns-query
+  # DNS 分流：特定域名使用特定 DNS
+  nameserver-policy:
+    # ===== AI 服务使用 Cloudflare DNS =====
+    "+.openai.com": https://cloudflare-dns.com/dns-query
+    "+.chatgpt.com": https://cloudflare-dns.com/dns-query
+    "+.anthropic.com": https://cloudflare-dns.com/dns-query
+    "+.claude.ai": https://cloudflare-dns.com/dns-query
+    "+.perplexity.ai": https://cloudflare-dns.com/dns-query
+    "+.gemini.google.com": https://cloudflare-dns.com/dns-query
+    # ===== Google 服务 =====
+    "+.google.com": https://dns.google/dns-query
+    "+.googleapis.com": https://dns.google/dns-query
+    "+.gstatic.com": https://dns.google/dns-query
+    "+.ggpht.com": https://dns.google/dns-query
+    "+.youtube.com": https://dns.google/dns-query
+    "+.ytimg.com": https://dns.google/dns-query
+    "+.googlevideo.com": https://dns.google/dns-query
+    # ===== GitHub =====
+    "+.github.com": https://dns.google/dns-query
+    "+.githubusercontent.com": https://dns.google/dns-query
+    "+.githubassets.com": https://dns.google/dns-query
+    # ===== Telegram =====
+    "+.telegram.org": https://cloudflare-dns.com/dns-query
+    "+.t.me": https://cloudflare-dns.com/dns-query
+    # ===== 国内域名使用国内 DNS =====
+    "+.cn": https://dns.alidns.com/dns-query
+    "+.bilibili.com": https://dns.alidns.com/dns-query
+    "+.douyin.com": https://dns.alidns.com/dns-query
+    "+.ixigua.com": https://dns.alidns.com/dns-query
+    "+.toutiao.com": https://dns.alidns.com/dns-query
+  respect-rules: true
+  enhanced-mode: fake-ip
+  fake-ip-range: 198.18.0.0/16
+  # 不会解析为 fake IP 的域名
+  # 这些域名将返回它们的真实 IP 地址
+  fake-ip-filter:
+    # ========== Local Network ==========
+    - "*.lan"
+    - "*.localdomain"
+    - "*.example"
+    - "*.invalid"
+    - "*.localhost"
+    - "*.test"
+    - "*.local"
+    - "*.home.arpa"
+    - "*.corp"
+    - "*.internal"
+
+    # ========== GitHub (SSH connection needs real IP) ==========
+    - "+.github.com"
+    - "+.githubusercontent.com"
+    - "+.githubapp.com"
+    - "+.githubassets.com"
+    - "github.com"
+    - "*.github.com"
+
+    # ========== Time/NTP Services ==========
+    - "+.pool.ntp.org"
+    - "+.ntp.org.cn"
+    - "+.time.edu.cn"
+    - "+.time.apple.com"
+    - "time1.cloud.tencent.com"
+    - "time.windows.com"
+    - "time.nist.gov"
+
+    # ========== Network Connectivity Check ==========
+    - "+.msftconnecttest.com"
+    - "+.msftncsi.com"
+    - "captive.apple.com"
+    - "detectportal.firefox.com"
+    - "*.connectivitycheck.gstatic.com"
+    - "clients3.google.com"
+    - "clients4.google.com"
+
+    # ========== Music Streaming ==========
+    - "music.163.com"
+    - "*.music.163.com"
+    - "*.126.net"
+    - "musicapi.taihe.com"
+    - "music.taihe.com"
+    - "songsearch.kugou.com"
+    - "trackercdn.kugou.com"
+    - "*.kuwo.cn"
+    - "api-jooxtt.sanook.com"
+    - "api.joox.com"
+    - "joox.com"
+    - "y.qq.com"
+    - "*.y.qq.com"
+    - "streamoc.music.tc.qq.com"
+    - "mobileoc.music.tc.qq.com"
+    - "isure.stream.qqmusic.qq.com"
+    - "dl.stream.qqmusic.qq.com"
+    - "aqqmusic.tc.qq.com"
+    - "amobile.music.tc.qq.com"
+    - "*.xiami.com"
+    - "*.music.migu.cn"
+    - "music.migu.cn"
+
+    # ========== Gaming Platforms ==========
+    - "+.srv.nintendo.net"
+    - "+.stun.playstation.net"
+    - "+.stun.*.*"
+    - "xbox.*.microsoft.com"
+    - "xnotify.xboxmojie.app"
+    - "+.ipv6.microsoft.com"
+    - "+.battlenet.com.cn"
+    - "+.wotgame.cn"
+    - "+.wggames.cn"
+    - "+.wowsgame.cn"
+    - "+.wargaming.net"
+    - "+.pvp.net"
+    - "*.square-enix.com"
+    - "*.finalfantasyxiv.com"
+    - "*.ffxiv.com"
+    - "*.ff14.sdo.com"
+    - "ff.dorado.sdo.com"
+
+    # ========== Router Management ==========
+    - "heartbeat.belkin.com"
+    - "*.linksys.com"
+    - "*.linksyssmartwifi.com"
+    - "*.router.asus.com"
+    - "*.hiwifi.com"
+    - "*.miwifi.com"
+    - "*.routerlogin.com"
+    - "*.mymeraki.com"
+    - "*.gl-inet.com"
+
+    # ========== Apple Services ==========
+    - "mesu.apple.com"
+    - "swscan.apple.com"
+    - "swquery.apple.com"
+    - "swdownload.apple.com"
+    - "swcdn.apple.com"
+    - "swdist.apple.com"
+    - "*.apple.com.edgesuite.net"
+    - "push-apple.com.akadns.net"
+
+    # ========== Tencent Related ==========
+    - "localhost.ptlogin2.qq.com"
+    - "localhost.sec.qq.com"
+
+    # ========== Others ==========
+    - "proxy.golang.org"
+    - "lens.l.google.com"
+    - "stun.l.google.com"
+    - "*.mcdn.bilivideo.cn"
+    - "+.media.dssott.com"
+
+http:
+  url-rewrite:
+    - ^https?://(www\.)?(g|google)\.cn https://www.google.com 302
+
+# 代理服务提供商
+proxy-providers:
+  ProxyProviderA:
+    url: https://www.cuijiajun.com:8080/51f3d191443fa810757f92639d8de2a6
+    interval: 10800
+    benchmark-url: http://www.gstatic.com/generate_204
+    benchmark-timeout: 10
+  ProxyProviderB:
+    url: https://api-huacloud.dev/sub?target=quanx&list=true&emoji=false&tfo=true&udp=true&url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Ftoken2%3Dym9kv77y-7e22e53940t7qdlc05
+    interval: 10800
+    benchmark-url: http://www.gstatic.com/generate_204
+    benchmark-timeout: 10
+  ProxyProviderC:
+    url: https://darrellcui.cc.cd/sub?token=e03a853a29b8fe7365979711866375ac
+    interval: 10800
+    benchmark-url: http://www.gstatic.com/generate_204
+    benchmark-timeout: 10
+
+# 代理组
+proxy-groups:
+  - name: Proxy
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Proxy.png
+    type: select
+    proxies:
+      - 自动选择
+      - HK 香港
+      - SG 新加坡
+      - JP 日本
+      - TW 台湾
+      - US 美国
+      - UK 英国
+      - 其他线路
+      - DIRECT
+
+  - name: AI Service
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/AI.png
+    type: select
+    proxies:
+      - US 美国
+      - UK 英国
+      - SG 新加坡
+      - JP 日本
+      - HK 香港
+      - TW 台湾
+      - 其他线路
+      - 手动选择
+
+  - name: Apple
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Apple.png
+    type: select
+    proxies:
+      - HK 香港
+      - US 美国
+      - SG 新加坡
+      - JP 日本
+      - TW 台湾
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
+  - name: Telegram
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Telegram.png
+    type: select
+    proxies:
+      - SG 新加坡
+      - HK 香港
+      - JP 日本
+      - TW 台湾
+      - US 美国
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
+  - name: Spotify
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Spotify.png
+    type: select
+    proxies:
+      - 流媒体专用
+      - HK 香港
+      - SG 新加坡
+      - US 美国
+      - JP 日本
+      - TW 台湾
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
+  - name: YouTube
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/YouTube.png
+    type: select
+    proxies:
+      - 流媒体专用
+      - HK 香港
+      - SG 新加坡
+      - TW 台湾
+      - JP 日本
+      - US 美国
+      - UK 英国
+      - 其他线路
+      - 手动选择
+
+  - name: GitHub
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/GitHub.png
+    type: select
+    proxies:
+      - HK 香港
+      - SG 新加坡
+      - JP 日本
+      - TW 台湾
+      - US 美国
+      - UK 英国
+      - 其他线路
+      - 手动选择
+      - DIRECT
+
+  - name: Web3
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Cryptocurrency.png
+    type: select
+    proxies:
+      - US 美国
+      - SG 新加坡
+      - HK 香港
+      - JP 日本
+      - UK 英国
+      - TW 台湾
+      - 其他线路
+      - 手动选择
+      - DIRECT
+
+  # 基于地区分组
+  - name: HK 香港
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Hong_Kong.png
+    type: select
+    include-all: true
+    filter: "(?i)(澳门|🇲🇴|Macau|Macao|香港|🇭🇰|Hong Kong|HK|HKG)"
+    proxies:
+      - HK-Auto
+  - name: HK-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)(澳门|🇲🇴|Macau|Macao|香港|🇭🇰|Hong Kong|HK|HKG)"
+
+  - name: SG 新加坡
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Singapore.png
+    type: select
+    include-all: true
+    filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"
+    proxies:
+      - SG-Auto
+  - name: SG-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"
+
+  - name: JP 日本
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Japan.png
+    type: select
+    include-all: true
+    filter: "(?i)(日本|🇯🇵|东京|大阪|JP|Japan|Tokyo|Osaka)"
+    proxies:
+      - JP-Auto
+  - name: JP-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)(日本|🇯🇵|东京|大阪|JP|Japan|Tokyo|Osaka)"
+
+  - name: TW 台湾
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Taiwan.png
+    type: select
+    include-all: true
+    filter: "(?i)(台湾|🇹🇼|TW|Taiwan|台-|台_|Taipei|TPE)"
+    proxies:
+      - TW-Auto
+  - name: TW-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)(台湾|🇹🇼|TW|Taiwan|台-|台_|Taipei|TPE)"
+
+  - name: US 美国
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_States.png
+    type: select
+    include-all: true
+    filter: "(?i)(美国|🇺🇸|US|USA|United States|America|Los Angeles|New York|San Francisco|Seattle|Chicago|美西|美东|西部|东部)"
+    proxies:
+      - US-Auto
+  - name: US-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)(美国|🇺🇸|US|USA|United States|America|Los Angeles|New York|San Francisco|Seattle|Chicago|美西|美东|西部|东部)"
+
+  - name: UK 英国
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/United_Kingdom.png
+    type: select
+    include-all: true
+    filter: "(?i)(英国|🇬🇧|UK|United Kingdom|Britain|伦敦|London|Manchester|Birmingham)"
+    proxies:
+      - UK-Auto
+  - name: UK-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)(英国|🇬🇧|UK|United Kingdom|Britain|伦敦|London|Manchester|Birmingham)"
+
+  - name: 流媒体专用
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)(IPLC|IEPL|专线|游戏|Game|Media|流媒体|Netflix|Disney|HBO|Prime|Video|NF|原生|Native|解锁|Unlock|Premium|Elite|Pro)"
+
+  - name: 其他线路
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/World_Map.png
+    type: select
+    include-all: true
+    filter: "(?i)^(?!.*(?:🇭🇰|香港|HK|Hong Kong|🇹🇼|台湾|臺灣|TW|Taiwan|🇯🇵|日本|JP|Japan|🇰🇷|韩国|KR|Korea|🇺🇸|美国|US|USA|America|🇸🇬|新加坡|SG|Singapore|🇨🇳|中国|CN|China|🇬🇧|英国|UK|Britain|London|\\.com\\b|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
+    proxies:
+      - 其他-Auto
+  - name: 其他-Auto
+    hidden: true
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "(?i)^(?!.*(?:🇭🇰|香港|HK|Hong Kong|🇹🇼|台湾|臺灣|TW|Taiwan|🇯🇵|日本|JP|Japan|🇰🇷|韩国|KR|Korea|🇺🇸|美国|US|USA|America|🇸🇬|新加坡|SG|Singapore|🇨🇳|中国|CN|China|🇬🇧|英国|UK|Britain|London|\\.com\\b|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
+
+  # 不限制地区
+  - name: 自动选择
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Auto.png
+    type: url-test
+    interval: 600
+    timeout: 5
+    lazy: true
+    tolerance: 100
+    include-all: true
+    filter: "^(?!.*(?:群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|\\.com\\b|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
+
+  - name: 手动选择
+    icon: https://fastly.jsdelivr.net/gh/Koolson/Qure/IconSet/Color/Static.png
+    type: select
+    include-all: true
+    filter: "^(?!.*(?:群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|\\.com\\b|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
+
+# 规则提供商
+rule-providers:
+  cn-direct:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/rokcso/dimrail/refs/heads/main/rules/cn-direct.yaml
+    path: ./rules/cn-direct.yaml
+    interval: 604800
+  lancidr:
+    type: http
+    behavior: ipcidr
+    format: yaml
+    url: https://raw.githubusercontent.com/rokcso/dimrail/refs/heads/main/rules/lancidr.yaml
+    path: ./rules/lancidr.yaml
+    interval: 604800
+  reject:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://anti-ad.net/clash.yaml
+    path: ./rules/reject.yaml
+    interval: 86400
+  ai service:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/rokcso/dimrail/refs/heads/main/rules/ai-offshore.yaml
+    path: ./rules/ai-offshore.yaml
+    interval: 604800
+  github:
+    type: http
+    behavior: domain
+    format: yaml
+    url: https://raw.githubusercontent.com/rokcso/dimrail/refs/heads/main/rules/github.yaml
+    path: ./rules/github.yaml
+    interval: 604800
+  telegram:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/telegram.list
+    interval: 86400
+  spotify:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/spotify.list
+    interval: 86400
+  youtube:
+    type: http
+    behavior: domain
+    format: text
+    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.list
+    interval: 86400
+  MultiRules:
+    type: http
+    behavior: classical
+    format: text
+    url: 
+    interval: 86400
+
