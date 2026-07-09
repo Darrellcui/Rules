@@ -1,0 +1,41 @@
+# NAME: Apple
+# AUTHOR: Darrell Cui
+# REPO: https://github.com/Darrellcui/QuanX/
+# UPDATED: 2026-07-09
+# FORMAT: Loon (DOMAIN / DOMAIN-SUFFIX / IP-CIDR / IP-CIDR6)
+
+# ===== Apple =====
+# Apple Push Notification / APNs (push.apple.com covers sandbox/api/gateway subdomains)
+DOMAIN-SUFFIX, push.apple.com, Apple
+DOMAIN-SUFFIX, akadns.net, Apple
+DOMAIN-SUFFIX, apple.com.edgekey.net, Apple
+# Apple Intelligence / Siri / Search
+DOMAIN, guzzoni.apple.com, Apple
+DOMAIN-SUFFIX, smoot.apple.com, Apple
+DOMAIN-SUFFIX, siri.apple.com, Apple
+DOMAIN-SUFFIX, ls.apple.com, Apple
+DOMAIN-SUFFIX, apps.mzstatic.com, Apple
+# Apple Relay / Private Cloud Compute
+DOMAIN-SUFFIX, apple-relay.apple.com, Apple
+DOMAIN-SUFFIX, apple-relay.cloudflare.com, Apple
+DOMAIN-SUFFIX, apple-relay.fastly-edge.com, Apple
+DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net, Apple
+DOMAIN-SUFFIX, cp4.cloudflare.com, Apple
+# iCloud Private Relay
+DOMAIN-SUFFIX, mask.icloud.com, Apple
+DOMAIN-SUFFIX, mask-h2.icloud.com, Apple
+DOMAIN-SUFFIX, gateway.icloud.com, Apple
+DOMAIN, mask-api.icloud.com, Apple
+DOMAIN, mask-api.fe.apple-dns.net, Apple
+DOMAIN, mask-t.apple-dns.net, Apple
+DOMAIN, mask.apple-dns.net, Apple
+# Apple IP ranges
+IP-CIDR, 17.249.0.0/16, Apple, no-resolve
+IP-CIDR, 17.252.0.0/16, Apple, no-resolve
+IP-CIDR, 17.57.144.0/22, Apple, no-resolve
+IP-CIDR, 17.188.128.0/18, Apple, no-resolve
+IP-CIDR, 17.188.20.0/23, Apple, no-resolve
+IP-CIDR6, 2620:149:a44::/48, Apple, no-resolve
+IP-CIDR6, 2403:300:a42::/48, Apple, no-resolve
+IP-CIDR6, 2403:300:a51::/48, Apple, no-resolve
+IP-CIDR6, 2a01:b740:a42::/48, Apple, no-resolve
