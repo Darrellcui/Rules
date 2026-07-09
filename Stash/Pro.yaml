@@ -198,7 +198,7 @@ proxy-providers:
 # 代理组
 proxy-groups:
   - name: Proxy
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Global.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Global.png
     type: select
     proxies:
       - HK 香港
@@ -211,7 +211,7 @@ proxy-groups:
       - DIRECT
 
   - name: OpenAI
-    icon: https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/openai.png
+    icon: https://raw.githubusercontent.com/shindgewongxj/WHATSINStash/master/icon/openai.png
     type: select
     proxies:
       - US 美国
@@ -224,7 +224,7 @@ proxy-groups:
       - 手动选择
 
   - name: Claude
-    icon: https://fastly.jsdelivr.net/gh/shindgewongxj/WHATSINStash@master/icon/anthropic.png
+    icon: https://raw.githubusercontent.com/shindgewongxj/WHATSINStash/master/icon/anthropic.png
     type: select
     proxies:
       - US 美国
@@ -237,7 +237,7 @@ proxy-groups:
       - 手动选择
 
   - name: Apple
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Apple.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Apple.png
     type: select
     proxies:
       - HK 香港
@@ -250,7 +250,7 @@ proxy-groups:
       - 手动选择
 
   - name: YouTube
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/YouTube.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/YouTube.png
     type: select
     proxies:
       - 流媒体专用
@@ -264,7 +264,7 @@ proxy-groups:
       - 手动选择
 
   - name: Google
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Google.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Google.png
     type: select
     proxies:
       - TW 台湾
@@ -277,7 +277,7 @@ proxy-groups:
       - 手动选择
 
   - name: Netflix
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Netflix.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Netflix.png
     type: select
     proxies:
       - 流媒体专用
@@ -291,7 +291,7 @@ proxy-groups:
       - 手动选择
 
   - name: TikTok
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/TikTok.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/TikTok.png
     type: select
     proxies:
       - US 美国
@@ -304,7 +304,7 @@ proxy-groups:
       - 手动选择
 
   - name: PayPal
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Paypal.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Paypal.png
     type: select
     proxies:
       - US 美国
@@ -317,7 +317,7 @@ proxy-groups:
       - 手动选择
 
   - name: Microsoft
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Microsoft.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Microsoft.png
     type: select
     proxies:
       - Proxy
@@ -333,37 +333,37 @@ proxy-groups:
 
   # 基于地区分组
   - name: HK 香港
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/HK.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/HK.png
     type: select
     include-all: true
     filter: "(?i)(澳门|🇲🇴|Macau|Macao|香港|🇭🇰|Hong Kong|HK|HKG)"
 
   - name: SG 新加坡
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/SG.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/SG.png
     type: select
     include-all: true
     filter: "新加坡|坡|狮城|🇸🇬|SG|(?i)Singapore"
 
   - name: JP 日本
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/JP.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/JP.png
     type: select
     include-all: true
     filter: "(?i)(日本|🇯🇵|东京|大阪|JP|Japan|Tokyo|Osaka)"
 
   - name: TW 台湾
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/TW.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/TW.png
     type: select
     include-all: true
     filter: "(?i)(台湾|🇹🇼|TW|Taiwan|台-|台_|Taipei|TPE)"
 
   - name: US 美国
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/US.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/US.png
     type: select
     include-all: true
     filter: "(?i)(美国|🇺🇸|US|USA|United States|America|Los Angeles|New York|San Francisco|Seattle|Chicago|美西|美东|西部|东部)"
 
   - name: UK 英国
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/UK.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/UK.png
     type: select
     include-all: true
     filter: "(?i)(英国|🇬🇧|UK|United Kingdom|Britain|伦敦|London|Manchester|Birmingham)"
@@ -379,14 +379,14 @@ proxy-groups:
     filter: "(?i)(IPLC|IEPL|专线|游戏|Game|Media|流媒体|Netflix|Disney|HBO|Prime|Video|NF|原生|Native|解锁|Unlock|Premium|Elite|Pro)"
 
   - name: 其他线路
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Final.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Final.png
     type: select
     include-all: true
     filter: "(?i)^(?!.*(?:🇭🇰|香港|HK|Hong Kong|🇹🇼|台湾|臺灣|TW|Taiwan|🇯🇵|日本|JP|Japan|🇰🇷|韩国|KR|Korea|🇺🇸|美国|US|USA|America|🇸🇬|新加坡|SG|Singapore|🇨🇳|中国|CN|China|🇬🇧|英国|UK|Britain|London|\\.com\\b|群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
 
   # 不限制地区
   - name: 手动选择
-    icon: https://fastly.jsdelivr.net/gh/Orz-3/mini@master/Alpha/Static.png
+    icon: https://raw.githubusercontent.com/Orz-3/mini/master/Alpha/Static.png
     type: select
     include-all: true
     filter: "^(?!.*(?:群|邀请|返利|循环|官网|客服|网站|网址|获取|订阅|流量|到期|机场|下次|版本|官址|备用|过期|已用|联系|邮箱|工单|贩卖|通知|倒卖|防止|国内|地址|频道|无法|说明|使用|提示|特别|访问|支持|教程|关注|更新|作者|加入|\\.com\\b|(?:\\b(?:USE|USED|TOTAL|Traffic|Expire|EMAIL|Panel|Channel|Author)\\b)|(?:\\d{4}-\\d{2}-\\d{2}|\\d+G))).*$"
@@ -411,68 +411,68 @@ rule-providers:
     type: http
     behavior: domain
     format: yaml
-    url: https://anti-ad.net/clash.yaml
+    url: https://raw.githubusercontent.com/privacy-protection-tools/anti-AD/master/anti-ad-clash.yaml
     path: ./rules/reject.yaml
     interval: 86400
   openai:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/openai.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/openai.list
     interval: 86400
   claude:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/anthropic.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/anthropic.list
     interval: 86400
   youtube:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/youtube.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/youtube.list
     interval: 86400
   google:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/google.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/google.list
     interval: 86400
   netflix:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/netflix.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/netflix.list
     interval: 86400
   tiktok:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/tiktok.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/tiktok.list
     interval: 86400
   paypal:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/paypal.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/paypal.list
     interval: 86400
   line:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/line.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/line.list
     interval: 86400
   microsoft:
     type: http
     behavior: domain
     format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/microsoft.list
+    url: https://raw.githubusercontent.com/MetaCubeX/meta-rules-dat/meta/geo/geosite/microsoft.list
     interval: 86400
   wechat:
     type: http
-    behavior: domain
-    format: text
-    url: https://fastly.jsdelivr.net/gh/MetaCubeX/meta-rules-dat@meta/geo/geosite/wechat.list
+    behavior: classical
+    format: yaml
+    url: https://raw.githubusercontent.com/blackmatrix7/ios_rule_script/master/rule/Clash/WeChat/WeChat.yaml
     interval: 86400
 
 # 分流规则
