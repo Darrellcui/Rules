@@ -6,36 +6,47 @@
 
 # ===== Apple =====
 # Apple Push Notification / APNs (push.apple.com covers sandbox/api/gateway subdomains)
-DOMAIN-SUFFIX, push.apple.com, Apple
-DOMAIN-SUFFIX, akadns.net, Apple
-DOMAIN-SUFFIX, apple.com.edgekey.net, Apple
+DOMAIN-SUFFIX, push.apple.com
+DOMAIN-SUFFIX, akadns.net
+DOMAIN-SUFFIX.com.edgekey.net
 # Apple Intelligence / Siri / Search
-DOMAIN, guzzoni.apple.com, Apple
-DOMAIN-SUFFIX, smoot.apple.com, Apple
-DOMAIN-SUFFIX, siri.apple.com, Apple
-DOMAIN-SUFFIX, ls.apple.com, Apple
-DOMAIN-SUFFIX, apps.mzstatic.com, Apple
+DOMAIN, guzzoni.apple.com
+DOMAIN-SUFFIX, smoot.apple.com
+DOMAIN-SUFFIX, siri.apple.com
+DOMAIN-SUFFIX, ls.apple.com
+DOMAIN-SUFFIX, apps.mzstatic.com
 # Apple Relay / Private Cloud Compute
-DOMAIN-SUFFIX, apple-relay.apple.com, Apple
-DOMAIN-SUFFIX, apple-relay.cloudflare.com, Apple
-DOMAIN-SUFFIX, apple-relay.fastly-edge.com, Apple
-DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net, Apple
-DOMAIN-SUFFIX, cp4.cloudflare.com, Apple
+DOMAIN-SUFFIX-relay.apple.com
+DOMAIN-SUFFIX-relay.cloudflare.com
+DOMAIN-SUFFIX-relay.fastly-edge.com
+DOMAIN-SUFFIX-relay.mask.apple-dns.net
+DOMAIN-SUFFIX, cp4.cloudflare.com
 # iCloud Private Relay
-DOMAIN-SUFFIX, mask.icloud.com, Apple
-DOMAIN-SUFFIX, mask-h2.icloud.com, Apple
-DOMAIN-SUFFIX, gateway.icloud.com, Apple
-DOMAIN, mask-api.icloud.com, Apple
-DOMAIN, mask-api.fe.apple-dns.net, Apple
-DOMAIN, mask-t.apple-dns.net, Apple
-DOMAIN, mask.apple-dns.net, Apple
+DOMAIN-SUFFIX, mask.icloud.com
+DOMAIN-SUFFIX, mask-h2.icloud.com
+DOMAIN-SUFFIX, gateway.icloud.com
+DOMAIN, mask-api.icloud.com
+DOMAIN, mask-api.fe.apple-dns.net
+DOMAIN, mask-t.apple-dns.net
+DOMAIN, mask.apple-dns.net
 # Apple IP ranges
-IP-CIDR, 17.249.0.0/16, Apple, no-resolve
-IP-CIDR, 17.252.0.0/16, Apple, no-resolve
-IP-CIDR, 17.57.144.0/22, Apple, no-resolve
-IP-CIDR, 17.188.128.0/18, Apple, no-resolve
-IP-CIDR, 17.188.20.0/23, Apple, no-resolve
-IP-CIDR6, 2620:149:a44::/48, Apple, no-resolve
-IP-CIDR6, 2403:300:a42::/48, Apple, no-resolve
-IP-CIDR6, 2403:300:a51::/48, Apple, no-resolve
-IP-CIDR6, 2a01:b740:a42::/48, Apple, no-resolve
+IP-CIDR, 17.249.0.0/16, no-resolve
+IP-CIDR, 17.252.0.0/16, no-resolve
+IP-CIDR, 17.57.144.0/22, no-resolve
+IP-CIDR, 17.188.128.0/18, no-resolve
+IP-CIDR, 17.188.20.0/23, no-resolve
+IP-CIDR6, 2620:149:a44::/48, no-resolve
+IP-CIDR6, 2403:300:a42::/48, no-resolve
+IP-CIDR6, 2403:300:a51::/48, no-resolve
+IP-CIDR6, 2a01:b740:a42::/48, no-resolve
+
+#US
+DOMAIN-SUFFIX, americanexpress.com
+DOMAIN-SUFFIX, aexp.com
+DOMAIN-SUFFIX, americanexpress.io
+DOMAIN-SUFFIX, amextravel.com
+DOMAIN-SUFFIX, nav.com
+DOMAIN-SUFFIX, stitchcredit.com
+DOMAIN-SUFFIX, crscreditapi.com
+DOMAIN-SUFFIX, equifax.com
+DOMAIN-SUFFIX, efxnow.com
