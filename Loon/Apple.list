@@ -8,18 +8,19 @@
 # Apple Push Notification / APNs (push.apple.com covers sandbox/api/gateway subdomains)
 DOMAIN-SUFFIX, push.apple.com
 DOMAIN-SUFFIX, akadns.net
-DOMAIN-SUFFIX.com.edgekey.net
+DOMAIN-SUFFIX, apple.com.edgekey.net
 # Apple Intelligence / Siri / Search
 DOMAIN, guzzoni.apple.com
 DOMAIN-SUFFIX, smoot.apple.com
 DOMAIN-SUFFIX, siri.apple.com
+DOMAIN-SUFFIX, gspe1-ssl.ls.apple.com
 DOMAIN-SUFFIX, ls.apple.com
 DOMAIN-SUFFIX, apps.mzstatic.com
 # Apple Relay / Private Cloud Compute
-DOMAIN-SUFFIX-relay.apple.com
-DOMAIN-SUFFIX-relay.cloudflare.com
-DOMAIN-SUFFIX-relay.fastly-edge.com
-DOMAIN-SUFFIX-relay.mask.apple-dns.net
+DOMAIN-SUFFIX, apple-relay.apple.com
+DOMAIN-SUFFIX, apple-relay.cloudflare.com
+DOMAIN-SUFFIX, apple-relay.fastly-edge.com
+DOMAIN-SUFFIX, apple-relay.mask.apple-dns.net
 DOMAIN-SUFFIX, cp4.cloudflare.com
 # iCloud Private Relay
 DOMAIN-SUFFIX, mask.icloud.com
