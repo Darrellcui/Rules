@@ -1,47 +1,35 @@
 # NAME: MultiRules
 # AUTHOR: Darrell Cui
 # REPO: https://github.com/Darrellcui/QuanX/
-# UPDATED: 2026-06-24 
+# UPDATED: 2026-07-09
+# FORMAT: Quantumult X (host / host-suffix / ip-cidr / ip6-cidr)
 
-# Apple Push Notification / APNs
+# ===== Apple =====
+# Apple Push Notification / APNs (push.apple.com covers sandbox/api/gateway subdomains)
 host-suffix, push.apple.com, Apple
-host-suffix, sandbox.push.apple.com, Apple
-host-suffix, api.push.apple.com, Apple
-host-suffix, gateway.push.apple.com, Apple
-host-suffix, akadns.net, Apple
-# Apple Intelligence / Siri / Search / Private Cloud Compute
-host, guzzoni.apple.com, Apple
-host-suffix, smoot.apple.com, Apple
-host, apple-relay.cloudflare.com, Apple
-host, apple-relay.fastly-edge.com, Apple
-host, cp4.cloudflare.com, Apple
-host, apple-relay.apple.com, Apple
-host-suffix, siri.apple.com, Apple
-host-suffix, gspe1-ssl.ls.apple.com, Apple
-host,guzzoni.apple.com, Apple
-host,mask-api.fe.apple-dns.net, Apple
-host,mask-api.icloud.com, Apple
-host,mask-t.apple-dns.net, Apple
-host,mask.apple-dns.net, Apple
-host-suffix,apple-relay.apple.com, Apple
-host-suffix,apple-relay.cloudflare.com, Apple
-host-suffix,apple-relay.fastly-edge.com, Apple
-host-suffix,apple-relay.mask.apple-dns.net, Apple
-host-suffix,cp4.cloudflare.com, Apple
-host-suffix,gateway.icloud.com, Apple
-host-suffix,gspe1-ssl.ls.apple.com, Apple
-host-suffix,ls.apple.com, Apple
-host-suffix,mask-h2.icloud.com, Apple
-host-suffix,mask.icloud.com, Apple
-host-suffix,smoot.apple.com, Apple
-host-suffix,apps.mzstatic.com, Apple
-# iCloud Private Relay
-host, mask.icloud.com, Apple
-host, mask-h2.icloud.com, Apple
-host, mask-api.icloud.com, Apple
-# Apple APNs Push
 host-suffix, akadns.net, Apple
 host-suffix, apple.com.edgekey.net, Apple
+# Apple Intelligence / Siri / Search
+host, guzzoni.apple.com, Apple
+host-suffix, smoot.apple.com, Apple
+host-suffix, siri.apple.com, Apple
+host-suffix, ls.apple.com, Apple
+host-suffix, apps.mzstatic.com, Apple
+# Apple Relay / Private Cloud Compute
+host-suffix, apple-relay.apple.com, Apple
+host-suffix, apple-relay.cloudflare.com, Apple
+host-suffix, apple-relay.fastly-edge.com, Apple
+host-suffix, apple-relay.mask.apple-dns.net, Apple
+host-suffix, cp4.cloudflare.com, Apple
+# iCloud Private Relay
+host-suffix, mask.icloud.com, Apple
+host-suffix, mask-h2.icloud.com, Apple
+host-suffix, gateway.icloud.com, Apple
+host, mask-api.icloud.com, Apple
+host, mask-api.fe.apple-dns.net, Apple
+host, mask-t.apple-dns.net, Apple
+host, mask.apple-dns.net, Apple
+# Apple IP ranges
 ip-cidr, 17.249.0.0/16, Apple, no-resolve
 ip-cidr, 17.252.0.0/16, Apple, no-resolve
 ip-cidr, 17.57.144.0/22, Apple, no-resolve
@@ -52,31 +40,26 @@ ip6-cidr, 2403:300:a42::/48, Apple, no-resolve
 ip6-cidr, 2403:300:a51::/48, Apple, no-resolve
 ip6-cidr, 2a01:b740:a42::/48, Apple, no-resolve
 
-
-# US
-host, apigateway.americanexpress.com, US
-host-suffix, americanexpress.com, US
-host-suffix, aexp.com, US
-host-suffix, americanexpress.io, US
-host-suffix, amextravel.com, US
-host-suffix, gateway-na.americanexpress.com, US
-host-suffix, nav.com, US
-host, app.nav.com, US
-host-suffix, stitchcredit.com, US
-host-suffix, crscreditapi.com, US
-host-suffix, equifax.com, US
-host, my.equifax.com, US
-host, api.equifax.com, US
-host-suffix, efxnow.com, US
-
-# EU
+# ===== EU =====
+# Placed before US so equip.uk.equifax.com resolves to EU instead of the US equifax.com rule
 host-suffix, n26.com, EU
 host-suffix, tech26.de, EU
 host-suffix, number26.de, EU
 host-suffix, equifax.co.uk, EU
+host, equip.uk.equifax.com, EU
 
-# HK BOC
+# ===== US =====
+host-suffix, americanexpress.com, US
+host-suffix, aexp.com, US
+host-suffix, americanexpress.io, US
+host-suffix, amextravel.com, US
+host-suffix, nav.com, US
+host-suffix, stitchcredit.com, US
+host-suffix, crscreditapi.com, US
+host-suffix, equifax.com, US
+host-suffix, efxnow.com, US
+
+# ===== HK =====
 host-suffix, bochk.com, HK
 host-suffix, bochk.com.hk, HK
-host, its.bochk.com, HK
 host-suffix, bankofchina.com, HK
