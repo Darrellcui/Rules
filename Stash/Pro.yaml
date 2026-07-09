@@ -179,17 +179,17 @@ http:
 
 # 代理服务提供商
 proxy-providers:
-  ProxyProviderA:
+  Bandwagon:
     url: https://www.cuijiajun.com:8080/51f3d191443fa810757f92639d8de2a6
     interval: 10800
     benchmark-url: http://www.gstatic.com/generate_204
     benchmark-timeout: 10
-  ProxyProviderB:
+  FlowerCloud:
     url: https://api-huacloud.dev/sub?target=quanx&list=true&emoji=false&tfo=true&udp=true&url=https%3A%2F%2Fapi.xmancdn.com%2Fosubscribe.php%3Ftoken2%3Dym9kv77y-7e22e53940t7qdlc05
     interval: 10800
     benchmark-url: http://www.gstatic.com/generate_204
     benchmark-timeout: 10
-  ProxyProviderC:
+  Cloudflare:
     url: https://darrellcui.cc.cd/sub?token=e03a853a29b8fe7365979711866375ac
     interval: 10800
     benchmark-url: http://www.gstatic.com/generate_204
