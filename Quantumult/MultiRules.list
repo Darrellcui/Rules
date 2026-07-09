@@ -13,6 +13,7 @@ host-suffix, apple.com.edgekey.net, Apple
 host, guzzoni.apple.com, Apple
 host-suffix, smoot.apple.com, Apple
 host-suffix, siri.apple.com, Apple
+host-suffix, gspe1-ssl.ls.apple.com, Apple
 host-suffix, ls.apple.com, Apple
 host-suffix, apps.mzstatic.com, Apple
 # Apple Relay / Private Cloud Compute
