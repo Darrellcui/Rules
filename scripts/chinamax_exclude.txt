@@ -1,0 +1,23 @@
+# 按“域名后缀”语义排除：写 example.com 会同时排除 example.com 及其所有子域
+# 一行一个，# 开头为注释。境外服务列表里已有的域名会被自动排除，这里只写额外的
+
+# 顶级域 .ms 属于蒙特塞拉特，不是国内域名（aka.ms 等）
+ms
+
+# 与 Amazon 账号 IP 一致性相关
+amazon.com
+a2z.com
+images-amazon.com
+ssl-images-amazon.com
+media-amazon.com
+
+# 支付 / 风控 / IP 探测
+stripe.com
+stripe.network
+whoami.akamai.net
+
+# 已确认的误收录
+blackberry.com
+jstor.org
+strava.com
+jetbrains.com
