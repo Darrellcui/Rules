@@ -1,0 +1,14 @@
+# 额外的 STUN/TURN 服务器主机名（精确主机名，一行一个）
+# 公共列表 pradt2/always-online-stun 会自动并入，这里补充它没有的、尤其是国内常见的
+stun.qq.com
+stun.miwifi.com
+stun.chat.bilibili.com
+stun.hitv.com
+stun.l.google.com
+stun1.l.google.com
+stun2.l.google.com
+stun3.l.google.com
+stun4.l.google.com
+global.stun.twilio.com
+stun.cloudflare.com
+stun.voip.blackberry.com
