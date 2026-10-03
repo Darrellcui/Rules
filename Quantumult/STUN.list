@@ -16,7 +16,6 @@ host, stun.actionvoip.com, proxy
 host, stun.alphacron.de, proxy
 host, stun.alpirsbacher.de, proxy
 host, stun.annatel.net, proxy
-host, stun.antisip.com, proxy
 host, stun.arkh-edu.ru, proxy
 host, stun.atagverwarming.nl, proxy
 host, stun.autosystem.com, proxy
@@ -85,6 +84,7 @@ host, stun.hitv.com, proxy
 host, stun.hoiio.com, proxy
 host, stun.hot-chilli.net, proxy
 host, stun.imafex.sk, proxy
+host, stun.infra.net, proxy
 host, stun.internetcalls.com, proxy
 host, stun.intervoip.com, proxy
 host, stun.ipfire.org, proxy
