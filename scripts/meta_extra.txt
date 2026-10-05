@@ -1,0 +1,13 @@
+# 手动补充的 Meta 域名（后缀语义：写 meta.ai 即匹配 meta.ai 及其所有子域）
+# 上游列表未收录或更新滞后的放在这里，一行一个
+meta.ai
+llama.com
+atmeta.com
+metaaivm.com
+muse.ai
+threads.com
+threads.net
+fb.watch
+fbwat.ch
+fb.gg
+tfbnw.net
