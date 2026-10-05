@@ -26,6 +26,8 @@ STUN_OUTPUT = ROOT.parent / "Quantumult" / "STUN.list"
 MIN_STUN = 100  # 公共列表正常有两百多个主机名
 EXCLUDE_FILE = ROOT / "chinamax_exclude.txt"
 OUTPUT = ROOT.parent / "Quantumult" / "ChinaMax_Clean.list"
+# 同一次运行中由 build_meta.py 先生成的本地列表，同样视为受保护的境外服务
+PROTECTED_LOCAL = [ROOT.parent / "Quantumult" / "Meta.list"]
 MIN_RULES = 100_000  # 上游正常规模约 12 万条，低于此值视为拉取异常
 
 
@@ -73,6 +75,13 @@ def main() -> None:
     protected: set[str] = set()
     for url in PROTECTED_LISTS:
         for line in fetch(url):
+            p = parse(line)
+            if p and p[0] in ("HOST", "HOST-SUFFIX"):
+                protected.add(p[1])
+    for path in PROTECTED_LOCAL:
+        if not path.exists():
+            raise RuntimeError(f"{path.name} 不存在，需先运行对应的构建脚本")
+        for line in path.read_text("utf-8").splitlines():
             p = parse(line)
             if p and p[0] in ("HOST", "HOST-SUFFIX"):
                 protected.add(p[1])
