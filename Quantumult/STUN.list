@@ -1,6 +1,6 @@
 # STUN.list：由 scripts/build_chinamax.py 自动生成，请勿手改
 # 来源：pradt2/always-online-stun + scripts/stun_extra.txt
-# 共 256 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
+# 共 258 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
 host, global.stun.twilio.com, proxy
 host, relay.webwormhole.io, proxy
 host, stun.1-voip.com, proxy
@@ -33,6 +33,7 @@ host, stun.callromania.ro, proxy
 host, stun.carlovizzini.it, proxy
 host, stun.cellmail.com, proxy
 host, stun.chat.bilibili.com, proxy
+host, stun.chatous.com, proxy
 host, stun.cheapvoip.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
@@ -90,7 +91,6 @@ host, stun.intervoip.com, proxy
 host, stun.ipfire.org, proxy
 host, stun.ippi.com, proxy
 host, stun.ippi.fr, proxy
-host, stun.irishvoip.com, proxy
 host, stun.it1.hr, proxy
 host, stun.jabbim.cz, proxy
 host, stun.jumblo.com, proxy
@@ -140,6 +140,7 @@ host, stun.officinabit.com, proxy
 host, stun.olimontel.it, proxy
 host, stun.oncloud7.ch, proxy
 host, stun.openvoip.it, proxy
+host, stun.peeters.com, proxy
 host, stun.peethultra.be, proxy
 host, stun.planetarium.com.br, proxy
 host, stun.poetamatusel.org, proxy
@@ -187,6 +188,7 @@ host, stun.splicecom.com, proxy
 host, stun.srce.hr, proxy
 host, stun.stadtwerke-eutin.de, proxy
 host, stun.stochastix.de, proxy
+host, stun.stratusvideo.com, proxy
 host, stun.studio71.it, proxy
 host, stun.swrag.de, proxy
 host, stun.syrex.co.za, proxy
@@ -234,7 +236,6 @@ host, stun.voipgate.com, proxy
 host, stun.voipgrid.nl, proxy
 host, stun.voipia.net, proxy
 host, stun.voipinfocenter.com, proxy
-host, stun.voipplanet.nl, proxy
 host, stun.voippro.com, proxy
 host, stun.voipraider.com, proxy
 host, stun.voipstunt.com, proxy
@@ -253,6 +254,7 @@ host, stun.webcalldirect.com, proxy
 host, stun.webfreak.org, proxy
 host, stun.wemag.com, proxy
 host, stun.westtel.ky, proxy
+host, stun.wtfismyip.com, proxy
 host, stun.yesdates.com, proxy
 host, stun.zadarma.com, proxy
 host, stun.zentauron.de, proxy
