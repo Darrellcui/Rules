@@ -1,5 +1,5 @@
 # Meta.list：由 scripts/build_meta.py 自动生成，请勿手改
-# 来源：Facebook.list 570，Whatsapp.list 17，geosite/meta 557，meta_extra.txt 11
+# 来源：Facebook.list 570，Whatsapp.list 17，geosite/meta 555，meta_extra.txt 11
 # 合计 HOST-SUFFIX 556，HOST-KEYWORD 3，IP-CIDR 34，IP-ASN 1，共 594 条
 HOST-SUFFIX,aboutfacebook.com,Meta
 HOST-SUFFIX,accessfacebookfromschool.com,Meta
