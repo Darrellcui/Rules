@@ -1,6 +1,6 @@
 # STUN.list：由 scripts/build_chinamax.py 自动生成，请勿手改
 # 来源：pradt2/always-online-stun + scripts/stun_extra.txt
-# 共 257 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
+# 共 256 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
 host, global.stun.twilio.com, proxy
 host, relay.webwormhole.io, proxy
 host, stun.1-voip.com, proxy
@@ -152,7 +152,6 @@ host, stun.qq.com, proxy
 host, stun.radiojar.com, proxy
 host, stun.ringostat.com, proxy
 host, stun.rockenstein.de, proxy
-host, stun.rolmail.net, proxy
 host, stun.romaaeterna.nl, proxy
 host, stun.romancecompass.com, proxy
 host, stun.ru-brides.com, proxy
