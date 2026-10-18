@@ -83,7 +83,6 @@ host, stun.hitv.com, proxy
 host, stun.hoiio.com, proxy
 host, stun.hot-chilli.net, proxy
 host, stun.imafex.sk, proxy
-host, stun.infra.net, proxy
 host, stun.internetcalls.com, proxy
 host, stun.intervoip.com, proxy
 host, stun.ipfire.org, proxy
@@ -152,6 +151,7 @@ host, stun.qq.com, proxy
 host, stun.radiojar.com, proxy
 host, stun.ringostat.com, proxy
 host, stun.rockenstein.de, proxy
+host, stun.rolmail.net, proxy
 host, stun.romaaeterna.nl, proxy
 host, stun.romancecompass.com, proxy
 host, stun.ru-brides.com, proxy
