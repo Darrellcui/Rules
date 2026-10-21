@@ -32,6 +32,7 @@ host, stun.callromania.ro, proxy
 host, stun.carlovizzini.it, proxy
 host, stun.cellmail.com, proxy
 host, stun.chat.bilibili.com, proxy
+host, stun.chatous.com, proxy
 host, stun.cheapvoip.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
@@ -82,7 +83,6 @@ host, stun.hitv.com, proxy
 host, stun.hoiio.com, proxy
 host, stun.hot-chilli.net, proxy
 host, stun.imafex.sk, proxy
-host, stun.infra.net, proxy
 host, stun.internetcalls.com, proxy
 host, stun.intervoip.com, proxy
 host, stun.ipfire.org, proxy
@@ -187,7 +187,6 @@ host, stun.srce.hr, proxy
 host, stun.stadtwerke-eutin.de, proxy
 host, stun.stochastix.de, proxy
 host, stun.stratusvideo.com, proxy
-host, stun.studio71.it, proxy
 host, stun.swrag.de, proxy
 host, stun.syrex.co.za, proxy
 host, stun.t-online.de, proxy
@@ -211,6 +210,7 @@ host, stun.tula.nu, proxy
 host, stun.twt.it, proxy
 host, stun.uabrides.com, proxy
 host, stun.ukh.de, proxy
+host, stun.uls.co.za, proxy
 host, stun.url.net.au, proxy
 host, stun.vadacom.co.nz, proxy
 host, stun.vavadating.com, proxy
