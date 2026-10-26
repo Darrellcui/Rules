@@ -1,6 +1,6 @@
 # STUN.list：由 scripts/build_chinamax.py 自动生成，请勿手改
 # 来源：pradt2/always-online-stun + scripts/stun_extra.txt
-# 共 255 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
+# 共 251 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
 host, global.stun.twilio.com, proxy
 host, relay.webwormhole.io, proxy
 host, stun.1-voip.com, proxy
@@ -16,7 +16,6 @@ host, stun.actionvoip.com, proxy
 host, stun.alphacron.de, proxy
 host, stun.alpirsbacher.de, proxy
 host, stun.annatel.net, proxy
-host, stun.antisip.com, proxy
 host, stun.arkh-edu.ru, proxy
 host, stun.atagverwarming.nl, proxy
 host, stun.autosystem.com, proxy
@@ -45,7 +44,6 @@ host, stun.diallog.com, proxy
 host, stun.dls.net, proxy
 host, stun.dunyatelekom.com, proxy
 host, stun.dus.net, proxy
-host, stun.easter-eggs.com, proxy
 host, stun.easybell.de, proxy
 host, stun.easyvoip.com, proxy
 host, stun.engineeredarts.co.uk, proxy
@@ -64,7 +62,6 @@ host, stun.freeswitch.org, proxy
 host, stun.freevoipdeal.com, proxy
 host, stun.frozenmountain.com, proxy
 host, stun.futurasp.es, proxy
-host, stun.galeriemagnet.at, proxy
 host, stun.geesthacht.de, proxy
 host, stun.genymotion.com, proxy
 host, stun.gigaset.net, proxy
@@ -74,7 +71,6 @@ host, stun.gntel.nl, proxy
 host, stun.godatenow.com, proxy
 host, stun.goldfish.ie, proxy
 host, stun.graftlab.com, proxy
-host, stun.grazertrinkwasseringefahr.at, proxy
 host, stun.halonet.pl, proxy
 host, stun.healthtap.com, proxy
 host, stun.hicare.net, proxy
@@ -83,6 +79,7 @@ host, stun.hitv.com, proxy
 host, stun.hoiio.com, proxy
 host, stun.hot-chilli.net, proxy
 host, stun.imafex.sk, proxy
+host, stun.infra.net, proxy
 host, stun.internetcalls.com, proxy
 host, stun.intervoip.com, proxy
 host, stun.ipfire.org, proxy
@@ -100,7 +97,6 @@ host, stun.komsa.de, proxy
 host, stun.kotter.net, proxy
 host, stun.labs.net, proxy
 host, stun.ladridiricette.it, proxy
-host, stun.lebendigefluesse.at, proxy
 host, stun.leonde.org, proxy
 host, stun.leucotron.com.br, proxy
 host, stun.levigo.de, proxy
@@ -127,7 +123,6 @@ host, stun.nanocosmos.de, proxy
 host, stun.ncic.com, proxy
 host, stun.neomedia.it, proxy
 host, stun.netappel.com, proxy
-host, stun.netgsm.com.tr, proxy
 host, stun.nexphone.ch, proxy
 host, stun.next-gen.ro, proxy
 host, stun.nextcloud.com, proxy
@@ -158,9 +153,9 @@ host, stun.ru-brides.com, proxy
 host, stun.rynga.com, proxy
 host, stun.sacko.com.au, proxy
 host, stun.schlund.de, proxy
-host, stun.schulinformatik.at, proxy
 host, stun.shadrinsk.net, proxy
 host, stun.signalwire.com, proxy
+host, stun.simlar.org, proxy
 host, stun.sip.us, proxy
 host, stun.sipdiscount.com, proxy
 host, stun.sipglobalphone.com, proxy
@@ -187,6 +182,7 @@ host, stun.srce.hr, proxy
 host, stun.stadtwerke-eutin.de, proxy
 host, stun.stochastix.de, proxy
 host, stun.stratusvideo.com, proxy
+host, stun.studio71.it, proxy
 host, stun.swrag.de, proxy
 host, stun.syrex.co.za, proxy
 host, stun.t-online.de, proxy
