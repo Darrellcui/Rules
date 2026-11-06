@@ -1,6 +1,6 @@
 # STUN.list：由 scripts/build_chinamax.py 自动生成，请勿手改
 # 来源：pradt2/always-online-stun + scripts/stun_extra.txt
-# 共 205 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
+# 共 209 个主机名；host 精确规则优先级最高，可压过 ChinaMax 的后缀规则
 host, global.stun.twilio.com, proxy
 host, relay.webwormhole.io, proxy
 host, stun.1-voip.com, proxy
@@ -34,6 +34,7 @@ host, stun.chatous.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
 host, stun.comrex.com, proxy
+host, stun.cope.es, proxy
 host, stun.crimeastar.net, proxy
 host, stun.ctafauni.it, proxy
 host, stun.dcalling.de, proxy
@@ -89,6 +90,7 @@ host, stun.ladridiricette.it, proxy
 host, stun.leonde.org, proxy
 host, stun.leucotron.com.br, proxy
 host, stun.levigo.de, proxy
+host, stun.lineaencasa.com, proxy
 host, stun.linphone.org, proxy
 host, stun.linuxtrent.it, proxy
 host, stun.lleida.net, proxy
@@ -103,6 +105,7 @@ host, stun.mixvoip.com, proxy
 host, stun.moonlight-stream.org, proxy
 host, stun.myhowto.org, proxy
 host, stun.myvoipapp.com, proxy
+host, stun.mywatson.it, proxy
 host, stun.nanocosmos.de, proxy
 host, stun.ncic.com, proxy
 host, stun.neomedia.it, proxy
@@ -202,6 +205,7 @@ host, stun.wcoil.com, proxy
 host, stun.webfreak.org, proxy
 host, stun.wemag.com, proxy
 host, stun.westtel.ky, proxy
+host, stun.wtfismyip.com, proxy
 host, stun.yesdates.com, proxy
 host, stun.zadarma.com, proxy
 host, stun.zentauron.de, proxy
