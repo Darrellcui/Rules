@@ -30,7 +30,6 @@ host, stun.callromania.ro, proxy
 host, stun.carlovizzini.it, proxy
 host, stun.cellmail.com, proxy
 host, stun.chat.bilibili.com, proxy
-host, stun.chatous.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
 host, stun.comrex.com, proxy
@@ -74,6 +73,7 @@ host, stun.hitv.com, proxy
 host, stun.hoiio.com, proxy
 host, stun.hot-chilli.net, proxy
 host, stun.imafex.sk, proxy
+host, stun.infra.net, proxy
 host, stun.ipfire.org, proxy
 host, stun.ippi.com, proxy
 host, stun.ippi.fr, proxy
@@ -128,7 +128,6 @@ host, stun.radiojar.com, proxy
 host, stun.ringostat.com, proxy
 host, stun.rockenstein.de, proxy
 host, stun.rolmail.net, proxy
-host, stun.romaaeterna.nl, proxy
 host, stun.romancecompass.com, proxy
 host, stun.ru-brides.com, proxy
 host, stun.sacko.com.au, proxy
@@ -144,6 +143,7 @@ host, stun.sipnet.net, proxy
 host, stun.sipnet.ru, proxy
 host, stun.sipthor.net, proxy
 host, stun.siptrunk.com, proxy
+host, stun.sky.od.ua, proxy
 host, stun.skydrone.aero, proxy
 host, stun.soho66.co.uk, proxy
 host, stun.solcon.nl, proxy
