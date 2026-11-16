@@ -30,10 +30,10 @@ host, stun.callromania.ro, proxy
 host, stun.carlovizzini.it, proxy
 host, stun.cellmail.com, proxy
 host, stun.chat.bilibili.com, proxy
+host, stun.chatous.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
 host, stun.comrex.com, proxy
-host, stun.cope.es, proxy
 host, stun.crimeastar.net, proxy
 host, stun.ctafauni.it, proxy
 host, stun.dcalling.de, proxy
