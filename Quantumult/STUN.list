@@ -32,7 +32,6 @@ host, stun.callromania.ro, proxy
 host, stun.carlovizzini.it, proxy
 host, stun.cellmail.com, proxy
 host, stun.chat.bilibili.com, proxy
-host, stun.chatous.com, proxy
 host, stun.cheapvoip.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
@@ -101,6 +100,7 @@ host, stun.ladridiricette.it, proxy
 host, stun.leonde.org, proxy
 host, stun.leucotron.com.br, proxy
 host, stun.levigo.de, proxy
+host, stun.lineaencasa.com, proxy
 host, stun.linphone.org, proxy
 host, stun.linuxtrent.it, proxy
 host, stun.liveo.fr, proxy
