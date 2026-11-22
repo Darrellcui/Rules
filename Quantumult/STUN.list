@@ -80,6 +80,7 @@ host, stun.hitv.com, proxy
 host, stun.hoiio.com, proxy
 host, stun.hot-chilli.net, proxy
 host, stun.imafex.sk, proxy
+host, stun.infra.net, proxy
 host, stun.internetcalls.com, proxy
 host, stun.intervoip.com, proxy
 host, stun.ipfire.org, proxy
@@ -242,7 +243,6 @@ host, stun.vozelia.com, proxy
 host, stun.voztele.com, proxy
 host, stun.voztovoice.org, proxy
 host, stun.waterpolopalermo.it, proxy
-host, stun.wcoil.com, proxy
 host, stun.webcalldirect.com, proxy
 host, stun.webfreak.org, proxy
 host, stun.wemag.com, proxy
