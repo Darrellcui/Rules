@@ -32,7 +32,6 @@ host, stun.callromania.ro, proxy
 host, stun.carlovizzini.it, proxy
 host, stun.cellmail.com, proxy
 host, stun.chat.bilibili.com, proxy
-host, stun.chatous.com, proxy
 host, stun.cheapvoip.com, proxy
 host, stun.clickphone.ro, proxy
 host, stun.cloudflare.com, proxy
@@ -243,6 +242,7 @@ host, stun.vozelia.com, proxy
 host, stun.voztele.com, proxy
 host, stun.voztovoice.org, proxy
 host, stun.waterpolopalermo.it, proxy
+host, stun.wcoil.com, proxy
 host, stun.webcalldirect.com, proxy
 host, stun.webfreak.org, proxy
 host, stun.wemag.com, proxy
